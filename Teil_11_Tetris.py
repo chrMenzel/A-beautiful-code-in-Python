@@ -118,7 +118,8 @@ while weitermachen:
       elif event.key == pg.K_DOWN:
         figur.update(1, 0)
       elif event.key == pg.K_LCTRL:
-        figur.rotate()
+        if figur.tet != tetrominoes[0]:
+          figur.rotate()
 
   screen.fill((0, 0, 0))
   figur.show()
